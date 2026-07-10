@@ -1,0 +1,80 @@
+@import "tailwindcss";
+/* Custom animation */
+@layer utilities {
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+  }
+
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-33.3333%);
+    }
+  }
+
+  .animate-carousel {
+    animation: scroll-x 15s linear infinite;
+  }
+
+  .pause-animation {
+    animation-play-state: paused !important;
+  }
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+:root {
+  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+  background: #F8FAFC;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg))
+      translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg))
+      translateY(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+}
+
+
+@layer utilities {
+  /* You can adjust '40s' to make it slower or faster */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* We translate -33.33% because we tripled the array in the JSX */
+      transform: translateX(-33.33%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
