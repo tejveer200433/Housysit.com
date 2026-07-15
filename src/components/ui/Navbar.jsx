@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import ThemeToggle from "./ThemeToggle";
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
@@ -128,8 +127,6 @@ export default function Navbar() {
 
       {/* Desktop Buttons */}
       <div className="hidden lg:flex items-center space-x-4">
-  <ThemeToggle />
-
   <Link
     href="mailto:sk@houstonsystem.com"
     className="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 transition font-medium"

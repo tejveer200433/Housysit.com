@@ -5,7 +5,6 @@ import Footer from "../components/ui/Footer";
 import CTA from "../components/CTA";
 import { ModalProvider } from "../context/ModalContext"; // Import the provider
 import ModalAutoTrigger from "../components/ModalAutoTrigger"; // Import the auto-trigger component
-import ThemeProvider from "../providers/ThemeProvider";
 export const metadata = {
   metadataBase: new URL("https://www.housysit.com"),
   title: {
@@ -56,7 +55,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
   <body className="antialiased">
-    <ThemeProvider>
   <ModalProvider>
 
     <ModalAutoTrigger />
@@ -72,7 +70,6 @@ export default function RootLayout({ children }) {
     <ChatWidget />
 
   </ModalProvider>
-</ThemeProvider>
   </body>
 </html>
   );
