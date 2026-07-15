@@ -15,7 +15,8 @@ import {
   Palette,
   Menu,
   X,
-  Headset
+  Headset,
+  Cable
 } from 'lucide-react'
 
 export default function Navbar() {
@@ -37,6 +38,7 @@ export default function Navbar() {
     { href: "/services/iot-systems", icon: Cpu, label: "IoT Systems" },
     { href: "/services/ai-machine-learning", icon: Brain, label: "AI / ML Development" },
     { href: "/services/cloud-services", icon: Cloud, label: "Cloud Services" },
+    { href: "/services/system-integration", icon: Cable, label: "System Integration" },
   ]
 
   // Navigation items
@@ -95,7 +97,7 @@ export default function Navbar() {
                 </button>
 
                 {open && (
-                  <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-gray-900 shadow-lg rounded-xl border border-gray-100 dark:border-gray-700 py-3 text-base z-50">// for dark mode 
+                  <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-gray-900 shadow-lg rounded-xl border border-gray-100 dark:border-gray-700 py-3 text-base z-50">
                     {services.map((service) => {
                       const Icon = service.icon
                       return (
