@@ -58,7 +58,7 @@ export default function Navbar() {
   const closeTimeout = useRef(null)
 
   return (
-    <header className="w-full py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-3xl bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800 z-50 sticky top-0 transition-colors duration-300">
+    <header className="w-full py-4 px-6 md:px-12 flex items-center justify-between backdrop-blur-3xl bg-white/80 border-b border-gray-200 z-50 sticky top-0 transition-colors duration-300">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link href="/">
@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex space-x-8 text-[#0F2F4E] dark:text-gray-200 font-medium text-lg relative">
+      <nav className="hidden lg:flex space-x-8 text-[#0F2F4E] font-medium text-lg relative">
         {navItems.map((item) => (
           <div key={item.href} className="relative group">
             {item.dropdown ? (
@@ -96,7 +96,7 @@ export default function Navbar() {
                 </button>
 
                 {open && (
-                  <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-gray-900 shadow-lg rounded-xl border border-gray-100 dark:border-gray-700 py-3 text-base z-50">
+                  <div className="absolute left-0 mt-2 w-72 bg-white shadow-lg rounded-xl border border-gray-100 py-3 text-base z-50">
                     {services.map((service) => {
                       const Icon = service.icon
                       return (
@@ -146,7 +146,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg border-t border-gray-200 dark:border-gray-700 lg:hidden z-50">
+        <div className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-200 lg:hidden z-50">
           <div className="px-6 py-4 space-y-4">
             {navItems.map((item) => (
               <div key={item.href}>
@@ -188,7 +188,7 @@ export default function Navbar() {
               </div>
             ))}
 
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-700 space-y-3">
+            <div className="pt-4 border-t border-gray-200 space-y-3">
               <Link
                 href="mailto:sk@houstonsystem.com"
                 className="block text-center px-4 py-2 border border-blue-500 text-blue-600 rounded-md hover:bg-blue-50 transition font-medium"

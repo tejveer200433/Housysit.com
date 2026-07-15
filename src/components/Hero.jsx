@@ -20,7 +20,7 @@ export default function Hero() {
       />
 
       {/* Dark overlay for contrast {chnaged for dark mode} */}
-      <div className="absolute inset-0 bg-black/50 dark:bg-black/70 transition-colors duration-300 z-10" />
+      <div className="absolute inset-0 bg-black/50 transition-colors duration-300 z-10" />
 
       {/* Optional Grid Pattern */}
       <GridPattern className="absolute inset-0 z-20 opacity-30" />
@@ -32,7 +32,7 @@ export default function Hero() {
           for a Digital-First World
         </h1>
 
-        <p className="text-white/80 dark:text-gray-200 max-w-2xl mx-auto text-base md:text-lg mb-8">
+        <p className="text-white/80 max-w-2xl mx-auto text-base md:text-lg mb-8">
           We specialize in custom software development, enterprise solutions, cloud services, and
           IT consulting to help organizations drive innovation, optimize operations, and achieve scalable digital transformation.
         </p>
@@ -42,7 +42,7 @@ export default function Hero() {
 
           <Link
             href="/contact"
-            className="border border-white text-white px-6 py-3 rounded-4xl text-sm font-medium hover:bg-white hover:text-black dark:hover:bg-gray-100 dark:hover:text-black transition flex items-center"
+            className="border border-white text-white px-6 py-3 rounded-4xl text-sm font-medium hover:bg-white hover:text-black transition flex items-center"
           >
             Contact Us
           </Link>

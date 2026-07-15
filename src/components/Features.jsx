@@ -42,7 +42,7 @@ const features = [
 
 export default function TechStackFeatures() {
   return (
-    <section className="py-24 px-6 overflow-hidden text-black dark:text-white transition-colors duration-300">
+    <section className="py-24 px-6 overflow-hidden text-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
 
         {/* Header Section */}
@@ -51,12 +51,12 @@ export default function TechStackFeatures() {
             <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
               We build the <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-indigo-400">future of IT</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">
+            <p className="text-gray-600 text-lg">
               Engineered solutions for companies that refuse to settle for "standard."
               Accelerate your roadmap with our specialized engineering pods.
             </p>
           </div>
-          <button className="px-8 py-4 bg-white dark:bg-gray-800 text-black dark:text-white font-bold rounded-full border border-gray-200 dark:border-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300 whitespace-nowrap">
+          <button className="px-8 py-4 bg-white text-black font-bold rounded-full border border-gray-200 hover:bg-blue-500 hover:text-white transition-all duration-300 whitespace-nowrap">
             View All Services
           </button>
         </div>
@@ -73,7 +73,7 @@ export default function TechStackFeatures() {
             >
               {/* Card Container */}
               <Link href={feature.link} className="block">
-                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-4xl border border-gray-200 dark:border-gray-700 backdrop-blur-sm transition-all duration-500 bg-white dark:bg-gray-900 group-hover:border-blue-500">
+                <div className="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 rounded-4xl border border-gray-200 backdrop-blur-sm transition-all duration-500 bg-white group-hover:border-blue-500">
 
                   <div className="flex flex-col md:flex-row items-start md:items-center gap-8 w-full">
                     {/* Icon & Index */}
@@ -90,7 +90,7 @@ export default function TechStackFeatures() {
                         {feature.tag}
                       </span>
                       <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
+                      <p className="text-gray-600 max-w-md leading-relaxed">
                         {feature.desc}
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export default function TechStackFeatures() {
 
                   {/* Interactive Element */}
                   <div className="mt-8 md:mt-0">
-                    <div className="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 transform group-hover:rotate-45">
+                    <div className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 transform group-hover:rotate-45">
                       <ArrowRight size={20} />
                     </div>
                   </div>
